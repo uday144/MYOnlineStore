@@ -19,7 +19,7 @@ import retrofit2.HttpException
                         NetworkResult.Error("Empty response body")
                     }
                 } else {
-                    NetworkResult.Error(response.message())
+                    NetworkResult.Error(message = "Something went wrong")
                 }
             } catch (e: Exception) {
                 NetworkResult.Error(e.message ?: "An error occurred")

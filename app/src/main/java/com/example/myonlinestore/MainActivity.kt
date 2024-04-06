@@ -58,6 +58,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // viewModel.fetchProducts()
+         viewModel.fetchProducts()
     }
 }

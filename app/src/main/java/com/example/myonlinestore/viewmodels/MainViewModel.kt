@@ -21,7 +21,7 @@ class MainViewModel @Inject constructor(private val repository: ProductRepositor
     val products: StateFlow<NetworkResult<List<Product>>>
         get() = _products
 
-    init {
+    fun fetchProducts(){
         viewModelScope.launch {
             repository.getProducts().collect {
                 _products.value = it
